@@ -4,7 +4,7 @@
   <link rel="icon" type="image/x-icon" href="grafiki/blackblue-logo.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BlackBlue - Nasze TXT</title>
+  <title>BlackBlue - Serwery</title>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -83,53 +83,122 @@
     .content-box {
       max-width: 900px;
       margin: 40px auto;
-      padding: 40px;
-      background-color: rgba(0, 0, 0, 0.55);
-      border-radius: 16px;
-      color: #ffffff;
+      padding: 40px 30px;
+      background: rgba(0, 0, 0, 0.60);
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      -webkit-backdrop-filter: blur(8px);
     }
 
-    .pack-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 14px;
-      padding: 25px 30px;
-      margin-bottom: 20px;
+    .page-title {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 42px;
+      color: #ffffff;
+      margin-bottom: 8px;
+      text-shadow: 0 0 20px rgba(0,0,0,0.9), 0 4px 12px rgba(0,0,0,0.8);
+    }
+    .page-subtitle {
+      text-align: center;
+      color: #e0e0e0;
+      margin-bottom: 45px;
+      font-size: 17px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+    }
+
+    .server-card {
+      background: rgba(0, 0, 0, 0.60);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 28px 30px;
+      margin-bottom: 22px;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .server-card:hover {
+      border-color: #4da6ff;
+      transform: translateY(-3px);
+    }
+
+    .server-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
-      transition: background 0.2s;
+      gap: 15px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
     }
-    .pack-card:hover {
-      background: rgba(255, 255, 255, 0.08);
-    }
-    .pack-info h3 {
-      margin: 0 0 6px 0;
+
+    .server-name {
       font-family: 'Poppins', sans-serif;
-      font-size: 20px;
-      color: #4da6ff;
-    }
-    .pack-info p {
-      margin: 0;
-      color: #aaa;
-      font-size: 14px;
-    }
-    .download-btn {
-      background: linear-gradient(90deg, #0D24FF, #4da6ff);
-      color: white;
-      padding: 12px 24px;
-      border-radius: 50px;
-      text-decoration: none;
+      font-size: 22px;
       font-weight: 700;
-      font-size: 15px;
-      font-family: 'Poppins', sans-serif;
-      white-space: nowrap;
-      transition: transform 0.2s, box-shadow 0.2s;
+      color: #4da6ff;
+      margin: 0;
     }
-    .download-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 15px rgba(13, 36, 255, 0.4);
+
+    .server-badge {
+      background: rgba(35, 165, 89, 0.2);
+      color: #23a559;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 50px;
+    }
+
+    .server-ip-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 14px;
+    }
+
+    .server-ip {
+      flex: 1;
+      font-family: 'Inter', monospace;
+      font-size: 16px;
+      color: #fff;
+      letter-spacing: 0.5px;
+    }
+
+    .copy-btn {
+      background: #0D24FF;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-family: 'Poppins', sans-serif;
+    }
+    .copy-btn:hover { background: #0012b3; }
+    .copy-btn.copied { background: #23a559; }
+
+    .server-desc {
+      color: #bbb;
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .server-meta {
+      display: flex;
+      gap: 18px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: #888;
+    }
+    .server-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
     footer {
@@ -138,7 +207,7 @@
       padding: 30px;
       text-align: center;
       font-family: 'Poppins', sans-serif;
-      margin-top: 40px;
+      margin-top: 50px;
     }
     footer a { color: #4da6ff; }
 
@@ -146,11 +215,9 @@
       header { padding: 0 20px; }
       .desktop-menu { display: none; }
       .hamburger { display: flex; }
-      .content-box { margin: 20px 15px; padding: 25px 20px; }
-      .pack-card {
-        flex-direction: column;
-        text-align: center;
-      }
+      .page-title { font-size: 32px; }
+      .server-ip-box { flex-direction: column; align-items: stretch; }
+      .copy-btn { width: 100%; }
     }
   </style>
 </head>
@@ -172,9 +239,9 @@
         <li><a href="regulamin.html"><b>REGULAMIN</b></a></li>
         <li><a href="https://discord.com/invite/uS4d6SgYTY" target="_blank"><b>DISCORD</b></a></li>
         <li><a href="chat.html"><b>CHAT</b></a></li>
-        <li><a href="txt.html" class="active"><b>NASZE TXT</b></a></li>
+        <li><a href="txt.html"><b>NASZE TXT</b></a></li>
         <li><a href="ekipa.html"><b>EKIPA</b></a></li>
-        <li><a href="serwery.html"><b>SERWERY</b></a></li>
+        <li><a href="serwery.html" class="active"><b>SERWERY</b></a></li>
         <li><a href="donate.html"><b>DONATE</b></a></li>
       </ul>
     </nav>
@@ -200,49 +267,89 @@
       </button>
     </div>
 
-  <nav class="header-nav" id="headerNav">
-    <ul>
-      <li><a href="index.html">STRONA GŁÓWNA</a></li>
-      <li><a href="regulamin.html">REGULAMIN</a></li>
-      <li><a href="https://discord.com/invite/uS4d6SgYTY" target="_blank">DISCORD</a></li>
-      <li><a href="chat.html">CHAT</a></li>
-      <li><a href="txt.html">NASZE TXT</a></li>
-      <li><a href="ekipa.html">EKIPA</a></li>
-      <li><a href="serwery.html">SERWERY</a></li>
-      <li><a href="donate.html">DONATE</a></li>
-    </ul>
-  </nav>
+    <nav class="header-nav" id="headerNav">
+      <ul>
+        <li><a href="index.html">STRONA GŁÓWNA</a></li>
+        <li><a href="regulamin.html">REGULAMIN</a></li>
+        <li><a href="https://discord.com/invite/uS4d6SgYTY" target="_blank">DISCORD</a></li>
+        <li><a href="chat.html">CHAT</a></li>
+        <li><a href="txt.html">NASZE TXT</a></li>
+        <li><a href="ekipa.html">EKIPA</a></li>
+        <li><a href="serwery.html">SERWERY</a></li>
+        <li><a href="donate.html">DONATE</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- TREŚĆ -->
   <div class="content-box">
-    <h1 style="text-align: center; font-family: 'Poppins', sans-serif; font-size: 36px; margin-top: 0; color: #4da6ff;">
-      Nasze Texture Packi
-    </h1>
-    <p style="text-align: center; color: #aaa; margin-bottom: 40px;">
-      Oficjalne texture packi ekipy BlackBlue
-    </p>
+    <h1 class="page-title">Nasze Serwery</h1>
+    <p class="page-subtitle">Serwery, na których najczęściej gramy</p>
 
-    <!-- Texture Pack 1 -->
-    <div class="pack-card">
-      <div class="pack-info">
-        <h3>BlackBlue TexturePack #1</h3>
-        <p>Nasz główny texture pack</p>
+    <!-- SERWER 1 -->
+    <div class="server-card">
+      <div class="server-header">
+        <h2 class="server-name">MineStar</h2>
+        <span class="server-badge">Online</span>
       </div>
-      <a href="txt/! §9TXT §1Vksel §a1.21.2 - 1.21.11.zip" class="download-btn" download="! §9TXT §1Vksel §a1.21.2 - 1.21.11.zip">
-        Pobierz
-      </a>
+
+      <div class="server-ip-box">
+        <div class="server-ip" id="ip1">minestar.gg</div>
+        <button class="copy-btn" onclick="copyIP('ip1', this)">Kopiuj IP</button>
+      </div>
+
+      <p class="server-desc">
+        Gramy razem, ćwiczymy i ulepszamy nasze sety.
+      </p>
+
+      <div class="server-meta">
+        <span>Wersja: 1.21.x</span>
+        <span>Tryb: Różne</span>
+      </div>
     </div>
 
-    <!-- Texture Pack 2 -->
-    <div class="pack-card">
-      <div class="pack-info">
-        <h3>BlackBlue TexturePack #2</h3>
-        <p>Drugi oficjalny pack</p>
+    <!-- SERWER 2 -->
+    <div class="server-card">
+      <div class="server-header">
+        <h2 class="server-name">ACMC</h2>
+        <span class="server-badge">Online</span>
       </div>
-      <a href="txt/! §9TXT §1TOTEM §a1.21.x.zip" class="download-btn" download="! §9TXT §1TOTEM §a1.21.x.zip">
-        Pobierz
-      </a>
+
+      <div class="server-ip-box">
+        <div class="server-ip" id="ip2">acmc.pl</div>
+        <button class="copy-btn" onclick="copyIP('ip2', this)">Kopiuj IP</button>
+      </div>
+
+      <p class="server-desc">
+        Tutaj gramy w bedy.
+      </p>
+
+      <div class="server-meta">
+        <span>Wersja: 1.21.x</span>
+        <span>Tryb: BedWars</span>
+      </div>
+    </div>
+
+    <!-- SERWER 3 (opcjonalny) -->
+    <div class="server-card">
+      <div class="server-header">
+        <h2 class="server-name">Kiedyś...</h2>
+        <span class="server-badge" style="background: rgba(255,107,53,0.2); color: #ff6b35;">Kiedyś...</span>
+      </div>
+
+      <div class="server-ip-box">
+        <div class="server-ip" id="ip3">Kiedyś...</div>
+        <button class="copy-btn" onclick="copyIP('ip3', this)">Kopiuj IP</button>
+      </div>
+
+      <p class="server-desc">
+        Kiedyś...
+      </p>
+
+      <div class="server-meta">
+        <span>Wersja: Kiedyś...</span>
+        <span>Tryb: Kiedyś...</span>
+      </div>
     </div>
 
   </div>
@@ -268,6 +375,18 @@
     headerNav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => headerNav.classList.remove('active'));
     });
+
+    function copyIP(id, btn) {
+      const text = document.getElementById(id).textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = 'Skopiowano!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = 'Kopiuj IP';
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    }
   </script>
 </body>
 </html>

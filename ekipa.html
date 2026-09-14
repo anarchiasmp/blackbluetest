@@ -4,7 +4,7 @@
   <link rel="icon" type="image/x-icon" href="grafiki/blackblue-logo.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BlackBlue - Nasze TXT</title>
+  <title>BlackBlue - Ekipa</title>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -49,10 +49,8 @@
     }
     .desktop-menu a:hover,
     .desktop-menu a.active { color: #ffffff; }
-
     .social-icons { display: flex; gap: 16px; align-items: center; }
     .social-icons a { color: white; display: flex; align-items: center; text-decoration: none; }
-
     .hamburger {
       display: none; flex-direction: column; gap: 5px;
       cursor: pointer; background: none; border: none; padding: 5px;
@@ -61,7 +59,6 @@
     .hamburger span {
       width: 25px; height: 3px; background-color: white; border-radius: 2px;
     }
-
     .header-nav {
       display: none; width: 100%; position: absolute; top: 70px; left: 0;
       background-color: #1a1a1a; border-bottom: 1px solid #333;
@@ -83,53 +80,98 @@
     .content-box {
       max-width: 900px;
       margin: 40px auto;
-      padding: 40px;
-      background-color: rgba(0, 0, 0, 0.55);
-      border-radius: 16px;
-      color: #ffffff;
+      padding: 40px 30px;
+      background: rgba(0, 0, 0, 0.60);
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      -webkit-backdrop-filter: blur(8px);
     }
 
-    .pack-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 14px;
-      padding: 25px 30px;
-      margin-bottom: 20px;
+    .page-title {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 48px;
+      color: #ffffff;
+      margin-bottom: 8px;
+      text-shadow: 0 0 20px rgba(0,0,0,0.9), 0 4px 12px rgba(0,0,0,0.8);
+      letter-spacing: 1px;
+    }
+    .page-subtitle {
+      text-align: center;
+      color: #e0e0e0;
+      margin-bottom: 50px;
+      font-size: 18px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .member-card {
+      background: rgba(0, 0, 0, 0.65);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 30px 25px;
+      text-align: center;
+      transition: transform 0.25s, border-color 0.25s;
+    }
+    .member-card:hover {
+      transform: translateY(-6px);
+      border-color: #4da6ff;
+    }
+
+    /* Avatar z możliwością wrzucenia zdjęcia */
+    .member-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 18px;
+      overflow: hidden;
+      border: 3px solid rgba(255,255,255,0.2);
+      background: linear-gradient(135deg, #0D24FF, #4da6ff);
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      transition: background 0.2s;
+      justify-content: center;
     }
-    .pack-card:hover {
-      background: rgba(255, 255, 255, 0.08);
+    .member-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
-    .pack-info h3 {
-      margin: 0 0 6px 0;
-      font-family: 'Poppins', sans-serif;
-      font-size: 20px;
-      color: #4da6ff;
-    }
-    .pack-info p {
-      margin: 0;
-      color: #aaa;
-      font-size: 14px;
-    }
-    .download-btn {
-      background: linear-gradient(90deg, #0D24FF, #4da6ff);
-      color: white;
-      padding: 12px 24px;
-      border-radius: 50px;
-      text-decoration: none;
+    .member-avatar span {
+      font-size: 42px;
       font-weight: 700;
-      font-size: 15px;
       font-family: 'Poppins', sans-serif;
-      white-space: nowrap;
-      transition: transform 0.2s, box-shadow 0.2s;
+      color: white;
     }
-    .download-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 15px rgba(13, 36, 255, 0.4);
+
+    .member-name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin: 0 0 6px 0;
+      color: #fff;
+    }
+    .member-role {
+      display: inline-block;
+      background: rgba(77, 166, 255, 0.18);
+      color: #4da6ff;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-bottom: 14px;
+    }
+    .member-desc {
+      color: #ccc;
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
     }
 
     footer {
@@ -138,7 +180,7 @@
       padding: 30px;
       text-align: center;
       font-family: 'Poppins', sans-serif;
-      margin-top: 40px;
+      margin-top: 60px;
     }
     footer a { color: #4da6ff; }
 
@@ -146,11 +188,7 @@
       header { padding: 0 20px; }
       .desktop-menu { display: none; }
       .hamburger { display: flex; }
-      .content-box { margin: 20px 15px; padding: 25px 20px; }
-      .pack-card {
-        flex-direction: column;
-        text-align: center;
-      }
+      .page-title { font-size: 34px; }
     }
   </style>
 </head>
@@ -172,8 +210,8 @@
         <li><a href="regulamin.html"><b>REGULAMIN</b></a></li>
         <li><a href="https://discord.com/invite/uS4d6SgYTY" target="_blank"><b>DISCORD</b></a></li>
         <li><a href="chat.html"><b>CHAT</b></a></li>
-        <li><a href="txt.html" class="active"><b>NASZE TXT</b></a></li>
-        <li><a href="ekipa.html"><b>EKIPA</b></a></li>
+        <li><a href="txt.html"><b>NASZE TXT</b></a></li>
+        <li><a href="ekipa.html" class="active"><b>EKIPA</b></a></li>
         <li><a href="serwery.html"><b>SERWERY</b></a></li>
         <li><a href="donate.html"><b>DONATE</b></a></li>
       </ul>
@@ -216,38 +254,75 @@
 
   <!-- TREŚĆ -->
   <div class="content-box">
-    <h1 style="text-align: center; font-family: 'Poppins', sans-serif; font-size: 36px; margin-top: 0; color: #4da6ff;">
-      Nasze Texture Packi
-    </h1>
-    <p style="text-align: center; color: #aaa; margin-bottom: 40px;">
-      Oficjalne texture packi ekipy BlackBlue
-    </p>
+    <h1 class="page-title">Nasza Ekipa</h1>
+    <p class="page-subtitle">Poznaj ludzi, którzy tworzą BlackBlue</p>
 
-    <!-- Texture Pack 1 -->
-    <div class="pack-card">
-      <div class="pack-info">
-        <h3>BlackBlue TexturePack #1</h3>
-        <p>Nasz główny texture pack</p>
+    <div class="team-grid">
+
+      <!-- Vksel -->
+      <div class="member-card">
+        <div class="member-avatar">
+          <!-- Wstaw zdjęcie: <img src="grafiki/vksel.png" alt="Vksel"> -->
+          <img src="grafiki/avatary/Vksel.png" alt="Vksel">
+        </div>
+        <h3 class="member-name">Vksel</h3>
+        <div class="member-role">Właściciel / Leader</div>
+        <p class="member-desc">Założyciel i główna siła napędowa BlackBlue. Odpowiada za większość rzeczy na kanale i serwerze.</p>
       </div>
-      <a href="txt/! §9TXT §1Vksel §a1.21.2 - 1.21.11.zip" class="download-btn" download="! §9TXT §1Vksel §a1.21.2 - 1.21.11.zip">
-        Pobierz
-      </a>
-    </div>
 
-    <!-- Texture Pack 2 -->
-    <div class="pack-card">
-      <div class="pack-info">
-        <h3>BlackBlue TexturePack #2</h3>
-        <p>Drugi oficjalny pack</p>
+      <!-- Jeremiosek -->
+      <div class="member-card">
+        <div class="member-avatar">
+          <img src="grafiki/avatary/Jeremiosek.png" alt="Jeremiosek">
+        </div>
+        <h3 class="member-name">Jeremiosek</h3>
+        <div class="member-role">Członek</div>
+        <p class="member-desc">Często offline, ale jak już się pojawi – jest klimat.</p>
       </div>
-      <a href="txt/! §9TXT §1TOTEM §a1.21.x.zip" class="download-btn" download="! §9TXT §1TOTEM §a1.21.x.zip">
-        Pobierz
-      </a>
-    </div>
 
+      <!-- Emeryt -->
+      <div class="member-card">
+        <div class="member-avatar">
+          <img src="grafiki/avatary/Emeryt.png" alt="Emeryt">
+        </div>
+        <h3 class="member-name">Emeryt</h3>
+        <div class="member-role">Członek</div>
+        <p class="member-desc">Stały bywalec ekipy. Zawsze chętny do grania i robienia głupot na filmach.</p>
+      </div>
+
+      <!-- AntiBocik -->
+      <div class="member-card">
+        <div class="member-avatar">
+          <img src="grafiki/avatary/AntiBocik.png" alt="AntiBocik">
+        </div>
+        <h3 class="member-name">AntiBocik</h3>
+        <div class="member-role">Członek</div>
+        <p class="member-desc">Chaotyczna dusza BlackBlue. Nigdy nie wiadomo, co wymyśli.</p>
+      </div>
+
+      <!-- wojtas -->
+      <div class="member-card">
+        <div class="member-avatar">
+          <img src="grafiki/avatary/wojtas.png" alt="wojtas">
+        </div>
+        <h3 class="member-name">wojtas</h3>
+        <div class="member-role">Członek</div>
+        <p class="member-desc">Cichy, ale solidny członek ekipy. Zawsze można na niego liczyć.</p>
+      </div>
+
+      <!-- mieszkoleszko -->
+      <div class="member-card">
+        <div class="member-avatar">
+          <img src="grafiki/avatary/mieszkoleszko.png" alt="mieszkoleszko">
+        </div>
+        <h3 class="member-name">mieszkoleszko</h3>
+        <div class="member-role">Członek</div>
+        <p class="member-desc">Ostatni, ale nie mniej ważny. Dopełnia skład BlackBlue.</p>
+      </div>
+
+    </div>
   </div>
 
-  <!-- FOOTER -->
   <footer>
     <p>&copy; 2026 BlackBlue. Wszelkie prawa zastrzeżone.</p>
     <nav>
